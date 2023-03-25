@@ -1,0 +1,125 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+* {
+  margin: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img,
+picture{
+  display: block;
+  max-width: 100%;
+}
+
+
+
+
+
+
+p{
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: 'Fraunces', serif;
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.875rem;
+  background-color: hsl(30, 38%, 92%);
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+  display: grid;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 600px){
+  .product{
+    --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.product-content {
+  display: grid;
+  padding: var(--content-padding);
+  gap: var(--content-spacing);
+}
+
+.product-category {
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: hsl(212, 21%, 14%);
+  line-height: 1;
+  overflow-wrap: break-word;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0.5rem;
+
+  font: inherit;
+  padding: 0.75rem 1.5rem;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  font-size: 0.925rem;
+}
+
+.button:is(:hover, :focus) {
+  background-color: hsl(158, 36%, 20%);
+}
